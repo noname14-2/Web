@@ -1,0 +1,179 @@
+/* Đặt màu nền và hiệu ứng gradient */
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient đẹp mắt */
+  overflow: hidden;
+  transition: background-color 0.3s ease-in-out; /* Hiệu ứng chuyển đổi mượt mà */
+}
+
+/* Chế độ tối */
+body.dark-mode {
+  background: #121212;
+  color: #fff;
+}
+
+.weather-app.dark-mode {
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+button.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+button.light-mode {
+  background-color: #fff;
+  color: black;
+}
+
+/* Giao diện ứng dụng */
+.weather-app {
+  background: rgba(255, 255, 255, 0.9); /* Màu nền sáng với độ trong suốt */
+  backdrop-filter: blur(15px); /* Mờ nền phía sau */
+  border-radius: 25px;
+  padding: 30px;
+  color: #333;
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out; /* Hiệu ứng mượt mà */
+}
+
+.weather-app:hover {
+  transform: translateY(-10px); /* Tạo hiệu ứng di chuyển khi hover */
+}
+
+/* Tiêu đề */
+h1 {
+  font-size: 2.5rem;
+  color: #2575fc;
+  margin-bottom: 20px;
+}
+
+.weather-app.dark-mode h1 {
+  color: #fff;
+}
+
+/* Khối chọn ngôn ngữ */
+.language-select {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.language-select select {
+  padding: 8px;
+  border: 1px solid #2575fc;
+  border-radius: 5px;
+  background: #f9f9f9;
+  font-size: 1rem;
+  color: #2575fc;
+  outline: none;
+  cursor: pointer;
+}
+
+.language-select select:focus {
+  border-color: #6a11cb;
+}
+
+/* Tìm kiếm thành phố */
+.search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search input {
+  padding: 12px;
+  border: 2px solid #2575fc;
+  border-radius: 25px 0 0 25px;
+  width: 70%;
+  outline: none;
+  font-size: 1rem;
+}
+
+.search input:focus {
+  border-color: #6a11cb;
+}
+
+.search button {
+  padding: 12px;
+  border: 2px solid #2575fc;
+  border-radius: 0 25px 25px 0;
+  background-color: #2575fc;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.search button:hover {
+  background-color: #6a11cb;
+}
+
+/* Hiển thị thời tiết chính */
+.weather-main {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.weather-main h2 {
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.weather-main p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Chi tiết thời tiết và dự báo tuần */
+.weather-details, .weather-weekly {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.weather-details div, .weather-weekly div {
+  margin: 10px;
+  text-align: center;
+  flex: 1;
+  min-width: 100px;
+}
+
+.weather-weekly div {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.weather-weekly h3 {
+  width: 100%;
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* Chế độ tối cho các phần tử */
+.weather-details.dark-mode, .weather-weekly.dark-mode {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.weather-main.dark-mode {
+  background: rgba(0, 0, 0, 0.6);
+}

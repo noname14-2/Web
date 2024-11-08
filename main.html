@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <script src="feather"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dự báo thời tiết</title>
+  <link rel="stylesheet" href="frontend.css">
+</head>
+<body>
+  <!-- Phần Chế độ Ban đêm / Ban ngày -->
+  <div class="mode-toggle">
+    <button onclick="toggleMode()">🌙 Đêm</button>
+  </div>
+  
+  <div class="weather-app">
+    <h1 id="title">Dự báo thời tiết</h1>
+    
+    <!-- Phần Chọn Ngôn Ngữ -->
+    <div class="language-select">
+      <label for="languageSelect" id="languageLabel">Ngôn ngữ:</label>
+      <select id="languageSelect">
+        <option value="vi">Tiếng Việt</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+    
+    <!-- Phần Tìm kiếm Thành Phố -->
+    <div class="search">
+      <input type="text" id="city" placeholder="Nhập tên thành phố">
+      <button onclick="getWeather()">🔍</button>
+    </div>
+    
+    <!-- Phần Hiển thị Thời Tiết Hiện Tại -->
+    <div id="weather-main" class="weather-main">
+      <!-- Nội dung sẽ được cập nhật bằng JavaScript -->
+    </div>
+    
+    <!-- Phần Hiển thị Chi Tiết Thời Tiết -->
+    <div id="weather-details" class="weather-details">
+      <!-- Nội dung sẽ được cập nhật bằng JavaScript -->
+    </div>
+    
+    <!-- Phần Hiển thị Dự Báo Tuần -->
+    <div id="weather-weekly" class="weather-weekly">
+      <!-- Nội dung sẽ được cập nhật bằng JavaScript -->
+    </div>
+  </div>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
